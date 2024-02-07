@@ -1,3 +1,5 @@
+import styles from "./Button.module.css"
+
 type Props = {
     title: string;
     color?: string;
@@ -5,7 +7,7 @@ type Props = {
 
 export const Button = ({ title }: Props) => {
     return (
-        <button >{title}</button>
+        <button className={styles.button}>{title}</button>
     );
 }
 
