@@ -1,48 +1,46 @@
 .header_principal {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+  justify-content: flex-start;
   background-color: rgba(0, 0, 0, 0.750);
-  color: white;
-  padding: 20px;
+  color: rgb(107, 86, 86);
   align-items: center;
-  flex-wrap: wrap;
   height: 75px;
   width: 100%;
-  position: relative;
 }
 
 .menu_options {
   display: flex;
+  flex-direction: column;
+  width: 200px;
   gap: 30px;
   list-style: none;
   font-size: 1.4rem;
-  padding: 0;
-  flex-wrap: wrap;
 }
 
 .logo {
   display: flex;
-  flex-direction: column;
+  scale: 0.752;
+}
+
+.menu_icon {
+  width: 50px;
+  height: 100%;
+  display: flex;
   align-items: center;
-  font-size: larger;
-  position: absolute;
-  bottom: -1rem;
-  left: 50px;
+  margin-left: 25px;
+  transition: ease-in 300ms;
 }
 
 .menu_icon img {
   width: 50px;
-  position: absolute;
   padding: 10px;
-  transform: translateY(-25px);
-  fill: white;
 }
 
 .menu_icon img:hover {
-  background-color: rgba(255, 255, 255, 0.477);
-  scale: 1.25;
-  transition: all 200ms;
   cursor: pointer;
+}
+
+.menu_icon:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+
 }

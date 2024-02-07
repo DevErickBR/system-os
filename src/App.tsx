@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <header className={styles.header_principal}>
-        <div className={styles.menu_icon}>
+        <div id='menuButton' className={styles.menu_icon} onClick={() => { alert("Erick") }}>
           <img src={menuIcon} />
         </div>
         <div className={styles.logo_background}>
