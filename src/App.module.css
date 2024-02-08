@@ -1,11 +1,31 @@
+/* estilos do header  */
+
 .header_principal {
   display: flex;
   justify-content: flex-start;
-  background-color: rgba(0, 0, 0, 0.750);
-  color: rgb(107, 86, 86);
   align-items: center;
   height: 75px;
   width: 100%;
+  position: absolute;
+}
+
+.logo {
+  display: flex;
+  scale: 0.752;
+}
+
+
+
+/* estilos da main */
+
+.menu {
+  background-color: #151a25;
+  width: 20vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu_options {
@@ -17,18 +37,13 @@
   font-size: 1.4rem;
 }
 
-.logo {
-  display: flex;
-  scale: 0.752;
-}
-
 .menu_icon {
   width: 50px;
-  height: 100%;
   display: flex;
   align-items: center;
   margin-left: 25px;
   transition: ease-in 300ms;
+  border-radius: 50%;
 }
 
 .menu_icon img {
@@ -41,6 +56,5 @@
 }
 
 .menu_icon:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-
+  background-color: rgba(255, 255, 255, 0.2);
 }
