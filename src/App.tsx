@@ -1,9 +1,6 @@
 import styles from './App.module.css';
-import menuIcon from './assets/icons/menu-hamburguer.svg';
 import { Button } from './Components/Button/Button';
 import actionButton from './helpers/actionButtonMenu'
-
-
 
 function App() {
 
@@ -11,7 +8,7 @@ function App() {
     <>
       <header className={styles.header_principal}>
         <div id='menuButton' className={styles.menu_icon} onClick={() => actionButton()}>
-          <img src={menuIcon} id='buttonIcon' />
+          <img id='buttonIcon' />
         </div>
         <div className={styles.logo_background}>
           <div className={styles.logo}>

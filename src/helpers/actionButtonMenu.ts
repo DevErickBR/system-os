@@ -1,14 +1,17 @@
+import { useState } from "react";
+import menuIcon from '../assets/icons/menu-hamburguer.svg';
+import menuIconClicked from '../assets/icons/tipo-de-barras.svg';
 
+const [icon, changeIcon] = useState<string>(menuIcon);
 
-let buttonOptions = document.getElementById("menuButton")
-let iconButton = document.getElementById("buttonIcon")
+let Button = document.getElementById('menuButton');
+Button?.querySelector('img')?.setAttribute('src', icon)
 
 const ActionButtonMenuClick = () => {
-    iconButton?.removeAttribute("src")
-    iconButton?.setAttribute("src", "./assets/icons/tipo-de-barras.svg")
-    return (
-        iconButton
+    changeIcon(
+        icon == menuIcon ? menuIconClicked : menuIcon
     )
+    return (console.log(Button))
 }
 
 export default ActionButtonMenuClick
