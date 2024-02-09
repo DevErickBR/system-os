@@ -4,7 +4,6 @@ export const Container = styled.div`
     display: flex;
     align-items:center;
     justify-items:center;
-    gap:50px;
     padding: 0 20px;
     height: 100px;
     width: 100vw;
@@ -12,24 +11,25 @@ export const Container = styled.div`
     color: ${props => props.theme.colors.text};
     font-weight:bold;
     font-size: 30px;
-    box-shadow: 0px 0px 20px 3px;
+    box-shadow: 0px 0px 20px;
 
     & img {
         height: 90px;
-    }
+        margin-left: 100px;
+       } 
+       
 `
 
 export const Icon = styled.div`
-    display: flex;
+    position: fixed;
     font-size: 50px;
-    color: white;
+    color:${props => props.theme.colors.text};
     text-shadow: 5px 5px 5px rgba(0,0,0, 0.35);
-    animation: setNewIcon 3s;
+    cursor: pointer;
 
-    &:hover{
-        cursor: pointer;
-    }
+`
+export const SideMenu = styled.div`
     
 
 
-`
+`; 
