@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Box } from "./stylesButton";
 
 type Props = {

@@ -46,19 +46,19 @@ export const Icon = styled.div`
 `
 export const SideMenu = styled.div<Props>`
     height: 100vh;
-    width: 20vw;
+    width: 25vw;
     display: flex;
     position:relative;
     background-color: ${props => props.theme.colors.primary};
     box-shadow: rgba(0, 0, 0, 0.24) 0px 6.9px 8px;
-    right:${(props) => props.Menu ? "0" : "20vw"};
+    right:${(props) => props.Menu ? "0" : "25vw"};
     transition: ease-in-out 300ms;
     justify-content:center;
     align-items: flex-start;
 
     li {
         list-style: none;
-        margin-top: 25px;
-        
     }
+
+
 ` 
