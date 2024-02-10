@@ -1,12 +1,15 @@
-import styles from "./Button.module.css"
+import { Component } from "react";
+import { Box } from "./stylesButton";
 
 type Props = {
     title: string;
+    IconButton: any;
 }
 
-export const Button = ({ title }: Props) => {
+export const Button = ({ title, IconButton }: Props) => {
     return (
-        <button className={styles.button}>{title}</button>
+        <Box><IconButton />{title}</Box>
     );
 }
 
+export default Button
