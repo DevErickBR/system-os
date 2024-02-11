@@ -4,8 +4,13 @@ type Props = {
     Menu: boolean;
 }
 
+export const Wrapper = styled.div`
+    position:absolute;
+`
+
 export const Container = styled.div`
     display: flex;
+    position:fixed;
     align-items:center;
     justify-items:center;
     padding: 0 20px;
@@ -19,7 +24,7 @@ export const Container = styled.div`
 
     & img {
         height: 90px;
-        margin-left: 100px;
+        margin-left: 50px;
         &::selection{
             background-color:transparent;
         }
@@ -29,7 +34,6 @@ export const Container = styled.div`
 export const Icon = styled.div`
     width: 50px;
     height: 50px;
-    position: fixed;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -45,20 +49,43 @@ export const Icon = styled.div`
 
 `
 export const SideMenu = styled.div<Props>`
+    position:relative;
     height: 100vh;
     width: 25vw;
-    display: flex;
-    position:relative;
+    margin-top: 100px;
+    display: ${(props) => props.Menu ? "flex" : "none"};
     background-color: ${props => props.theme.colors.primary};
     box-shadow: rgba(0, 0, 0, 0.24) 0px 6.9px 8px;
     right:${(props) => props.Menu ? "0" : "25vw"};
-    transition: ease-in-out 300ms;
+    opacity: ${(props) => props.Menu ? "1" : "0"};
+    transition: ease-in-out 1s;
     justify-content:center;
     align-items: flex-start;
+    animation: ${(props) => props.Menu ? "fadeIn 300ms" : "fadeOut 300ms"};
 
     li {
         list-style: none;
     }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            right: 25vw;
+        }
+        to {
+            opacity: 1;
+            right: 0;
+        }
+    }
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+            right: 0vw;
+        }
+        to {
+            opacity: 0;
+            right: 25vw;
+        }
+    }
+`
 
-
-` 

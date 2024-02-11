@@ -1,10 +1,18 @@
-import Header from "./Components/Header/index"
+import Header from "./Components/Header/index";
+import ClientsPage from "./pages/Clients/Clients";
+import { Route, Routes } from "react-router-dom";
+import { AppDiv } from "./styled";
 
 const App = () => {
   return (
-    <div className="App">
+    <AppDiv>
       <Header />
-    </div>
+      <div>
+        <Routes >
+          <Route path="/clientes" element={<ClientsPage />} />
+        </Routes>
+      </div>
+    </AppDiv>
   )
 };
 

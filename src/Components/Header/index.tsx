@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Icon, SideMenu } from "./styles"
+import { Container, Icon, SideMenu, Wrapper } from "./styles"
 import { Button } from "../Button/Button";
 import * as FaIcons from "react-icons/fa6";
 import Logo from "../../../public/logo-notefix.svg"
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     }
 
     return (
-        <>
+        <Wrapper>
             <Container>
                 <Icon onClick={setIconMenu}>
                     {showMenu ? <FaIcons.FaXmark /> : <FaIcons.FaBars />}
@@ -29,8 +29,7 @@ const Header: React.FC = () => {
                     < Button title="Venda" IconButton={FaIcons.FaCartShopping} />
                 </li>
             </SideMenu>
-
-        </>
+        </Wrapper>
     );
 }
 

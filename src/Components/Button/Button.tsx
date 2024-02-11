@@ -2,7 +2,7 @@ import { Box } from "./stylesButton";
 
 type Props = {
     title: string;
-    IconButton: any;
+    IconButton?: any;
 }
 
 export const Button = ({ title, IconButton }: Props) => {

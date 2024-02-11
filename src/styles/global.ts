@@ -1,17 +1,17 @@
 import { createGlobalStyle } from "styled-components";
 
+
 export default createGlobalStyle`
+   @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
    * {
     margin: 0%;
     padding: 0;
     box-sizing:border-box;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
    }
 
    body{
-    background-color: ${props => props.theme.colors.background};
     width: 100vw;
     height:100vh;
-    overflow: hidden;
    }
 `;
