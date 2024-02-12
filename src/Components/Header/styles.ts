@@ -61,7 +61,7 @@ export const SideMenu = styled.div<Props>`
     transition: ease-in-out 1s;
     justify-content:center;
     align-items: flex-start;
-    animation: ${(props) => props.Menu ? "fadeIn 300ms" : "fadeOut 300ms"};
+    animation: fadeIn 300ms;
 
     li {
         list-style: none;
@@ -77,15 +77,6 @@ export const SideMenu = styled.div<Props>`
             right: 0;
         }
     }
-    @keyframes fadeOut {
-        from {
-            opacity: 1;
-            right: 0vw;
-        }
-        to {
-            opacity: 0;
-            right: 25vw;
-        }
-    }
+    
 `
 

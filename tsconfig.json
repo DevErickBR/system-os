@@ -32,6 +32,5 @@
   ],
   "files": [
     "src/styles/light.d.ts",
-    "./src/pages/Clients/Container.ts"
   ]
 }
