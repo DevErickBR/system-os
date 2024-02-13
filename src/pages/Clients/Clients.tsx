@@ -1,4 +1,4 @@
-import { Container, HeaderTable, FormClients, Wrapper } from "./styles";
+import { Container, HeaderTable, FormClients, Wrapper, BoxButtons } from "./styles";
 import TableItens from "../../Components/TableItens/TableItens";
 import InputForm from "../../Components/Input/Input"
 import { Clients } from "../../data/ClientsData";
@@ -11,9 +11,15 @@ const ClientsPage = () => {
     return (
         <Wrapper>
             <FormClients>
-                <InputForm title="nome" id="name" />
-                <InputForm title="Contato" id="contact" />
-                <InputForm title="CPF" id="name" />
+                <div>
+                    <InputForm title="nome" id="name" />
+                    <InputForm title="Contato" id="contact" />
+                    <InputForm title="CPF" id="name" />
+                    <BoxButtons>
+                        <button>Cancelar</button>
+                        <button>Cadastrar</button>
+                    </BoxButtons>
+                </div>
             </FormClients>
             <Container>
                 <div>
