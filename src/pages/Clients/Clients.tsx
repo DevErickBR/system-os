@@ -1,4 +1,5 @@
-import { Container, HeaderTable, FormClients, Wrapper, BoxButtons } from "./styles";
+import { Container, HeaderTable, FormClients, Wrapper, BoxButtons, ContainerForm, ButtonAction } from "./styles";
+import * as FaIcons from "react-icons/fa6"
 import TableItens from "../../Components/TableItens/TableItens";
 import InputForm from "../../Components/Input/Input"
 import { Clients } from "../../data/ClientsData";
@@ -10,22 +11,24 @@ const ClientsPage = () => {
     const [form, showForm] = useState<boolean>(false);
     return (
         <Wrapper>
-            <FormClients>
-                <div>
-                    <InputForm title="nome" id="name" />
-                    <InputForm title="Contato" id="contact" />
-                    <InputForm title="CPF" id="name" />
-                    <BoxButtons>
-                        <button>Cancelar</button>
-                        <button>Cadastrar</button>
-                    </BoxButtons>
-                </div>
-            </FormClients>
+            {form &&
+                <FormClients>
+                    <ContainerForm>
+                        <InputForm title="nome" id="name" />
+                        <InputForm title="Contato" id="contact" />
+                        <InputForm title="CPF" id="name" />
+                        <BoxButtons>
+                            <ButtonAction onClick={() => showForm(!form)} backGround="#FF0000">{<FaIcons.FaRegRectangleXmark />}Cancelar</ButtonAction>
+                            <ButtonAction backGround="#00FF48">{<FaIcons.FaRegSquareCheck />}Cadastrar</ButtonAction>
+                        </BoxButtons>
+                    </ContainerForm>
+                </FormClients>
+            }
             <Container>
                 <div>
                     <HeaderTable>
                         Clientes
-                        <button>Adicionar</button>
+                        <button onClick={() => showForm(!form)}>Adicionar</button>
                     </HeaderTable>
                     <table>
                         <tr className="header">

@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
+type Props = {
+    backGround: string;
+}
+
 export const Container = styled.div`
     margin-top: 150px;
     width: 100vw;
     display: flex;
     justify-content: center;
     overflow:hidden;
+    position:absolute;
 
     div {
         font-size: 40px;
@@ -43,7 +48,7 @@ export const HeaderTable = styled.div`
         background-color: transparent;
         cursor: pointer;
         border: 3px #AFF765 solid;
-        transition: ease-in-out 600ms;
+        transition: ease-in-out 300ms;
 
         &:before{
             content: "";
@@ -57,7 +62,7 @@ export const HeaderTable = styled.div`
             background-color: #AFF765;
             z-index: -1;
 
-            transition: ease-in-out 500ms;
+            transition: ease-in-out 200ms;
         };
 
         &:before{
@@ -80,8 +85,8 @@ export const HeaderTable = styled.div`
 export const Wrapper = styled.div`
     width: 100%;
     height: 100%;
-    position: absolute;
-    z-index: 4;
+    position:absolute;
+    overflow: hidden;
 `;
 
 export const FormClients = styled.div`
@@ -91,25 +96,70 @@ export const FormClients = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    div {
-        display: flex;
-        flex-direction: column;
-        background-color: ${(props) => props.theme.colors.primary};
-        width: 75vw;
-        height: 60vh;
-        align-items:center;
-        gap: 50px;
-        padding: 50px;
-        border-radius:25px 25px;
-    };
-
     
 `;
 
-export const BoxButtons = styled.div`
-    width: 100%;
-    height:100%;
-    flex-direction: row;
-    display:flex;
+export const ContainerForm = styled.div`
+    display: flex;
+    flex-direction: column;
+    background-color: ${(props) => props.theme.colors.primary};
+    width: 75vw;
+    height: 60vh;
+    align-items:center;
+    gap: 50px;
+    padding: 50px;
+    border-radius:25px 25px;
+`
 
+export const BoxButtons = styled.div`
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70%;
+    align-items: center;
+    justify-content: space-around;
+`;
+
+export const ButtonAction = styled.button<Props>`
+        width: 200px;
+        height: 70px;
+        font-size: 25px;
+        font-weight: bold;
+        position:relative;
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border: none;
+        background-color:transparent;
+        color: ${(props) => props.theme.colors.text};
+        overflow:hidden;
+        border-radius: 15px 15px;
+        
+
+        &:before{
+            content:"";
+            width: 0%;
+            height: 10px;
+            position: absolute;
+            background-color:${(Props) => Props.backGround};
+            bottom: 0%;
+            left: 0%;
+            transition: ease-in-out 200ms;
+            z-index: 0;
+        };
+
+        &:hover{
+            cursor: pointer;
+            svg {
+                transition: ease-in-out 300ms;
+                color:${(Props) => Props.backGround};
+            }
+            &:before{
+                width:100%;
+            }
+        };
+
+        :active{
+            border: none;
+        }
 `;

@@ -11,4 +11,5 @@ export const InputBox = styled.input`
     color: ${(props) => props.theme.colors.text};
     border-radius:10px 10px;
     box-shadow:0px 0px 20px rgba(0,0,0,0.30);
+    outline: none;
 `

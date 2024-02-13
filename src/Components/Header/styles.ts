@@ -4,8 +4,10 @@ type Props = {
     Menu: boolean;
 }
 
+
 export const Wrapper = styled.div`
     position:absolute;
+    z-index: 4;
 `
 
 export const Container = styled.div`
@@ -65,6 +67,10 @@ export const SideMenu = styled.div<Props>`
 
     li {
         list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
     }
     
     @keyframes fadeIn {
