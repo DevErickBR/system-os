@@ -1,5 +1,6 @@
 import * as FaIcons from "react-icons/fa6";
 import { Table } from "./styles"
+import { delCliets } from "../../helpers/delClients";
 
 type Props = {
     id: number,
@@ -8,15 +9,15 @@ type Props = {
     cpf: string,
 }
 
-const TableItens = ({ id, name, contact, cpf }: Props) => {
+const TableItens = ({ id, name, contact, cpf, }: Props) => {
     return (
         <Table>
             <th>{id}</th>
             <th>{name}</th>
             <th>{contact}</th>
             <th>{cpf}</th>
-            <th><FaIcons.FaPen /></th>
-            <th><FaIcons.FaTrashCan /></th>
+            <th className="icon" ><FaIcons.FaPen /></th>
+            <th className="icon" onClick={() => { delCliets() }}><FaIcons.FaTrashCan /></th>
         </Table>
     );
 };

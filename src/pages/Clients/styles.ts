@@ -133,13 +133,12 @@ export const ButtonAction = styled.button<Props>`
         background-color:transparent;
         color: ${(props) => props.theme.colors.text};
         overflow:hidden;
-        border-radius: 15px 15px;
         
 
         &:before{
             content:"";
             width: 0%;
-            height: 10px;
+            height: 6px;
             position: absolute;
             background-color:${(Props) => Props.backGround};
             bottom: 0%;

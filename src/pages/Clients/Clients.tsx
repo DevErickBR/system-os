@@ -2,6 +2,7 @@ import { Container, HeaderTable, FormClients, Wrapper, BoxButtons, ContainerForm
 import * as FaIcons from "react-icons/fa6"
 import TableItens from "../../Components/TableItens/TableItens";
 import InputForm from "../../Components/Input/Input"
+import { Person } from "../../types/Person";
 import { Clients } from "../../data/ClientsData";
 import { useState } from "react";
 
@@ -9,6 +10,7 @@ import { useState } from "react";
 
 const ClientsPage = () => {
     const [form, showForm] = useState<boolean>(false);
+    const [listClients, setListClients] = useState<Person[]>(Clients)
     return (
         <Wrapper>
             {form &&
@@ -39,7 +41,7 @@ const ClientsPage = () => {
                             <th>Editar</th>
                             <th>Excluir</th>
                         </tr>
-                        {Clients.map((e, index) => (
+                        {listClients.map((e, index) => (
                             <TableItens key={index} id={index} name={e.name} contact={e.contact} cpf={e.cpf} />
                         ))}
                     </table>

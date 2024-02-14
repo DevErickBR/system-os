@@ -5,7 +5,8 @@ export const Table = styled.tr`
     border-bottom: solid 2px;
     border-color: ${(props) => props.theme.colors.secondary};
     height:40px;
-    svg {
+
+    .icon{
         :hover{
         cursor: pointer;
         }
