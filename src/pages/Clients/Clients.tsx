@@ -5,23 +5,26 @@ import InputForm from "../../Components/Input/Input"
 import { Person } from "../../types/Person";
 import { Clients } from "../../data/ClientsData";
 import { useState } from "react";
-
+import { actionAddClients } from "../../helpers/addClients";
 
 
 const ClientsPage = () => {
     const [form, showForm] = useState<boolean>(false);
     const [listClients, setListClients] = useState<Person[]>(Clients)
+    const [name, setName] = useState<string>("")
+    const [contact, setContact] = useState<string>("")
+    const [cpf, setCPF] = useState<string>("")
     return (
         <Wrapper>
             {form &&
                 <FormClients>
                     <ContainerForm>
-                        <InputForm title="nome" id="name" />
-                        <InputForm title="Contato" id="contact" />
-                        <InputForm title="CPF" id="name" />
+                        <InputForm title="nome" id="name" state={name} setState={setName} />
+                        <InputForm title="Contato" id="contact" state={contact} setState={setContact} />
+                        <InputForm title="CPF" id="name" state={cpf} setState={setCPF} />
                         <BoxButtons>
                             <ButtonAction onClick={() => showForm(!form)} backGround="#FF0000">{<FaIcons.FaRegRectangleXmark />}Cancelar</ButtonAction>
-                            <ButtonAction backGround="#00FF48">{<FaIcons.FaRegSquareCheck />}Cadastrar</ButtonAction>
+                            <ButtonAction onClick={() => actionAddClients(listClients, name, contact, cpf, showForm, setName, setContact, setCPF)} backGround="#00FF48">{<FaIcons.FaRegSquareCheck />}Cadastrar</ButtonAction>
                         </BoxButtons>
                     </ContainerForm>
                 </FormClients>
@@ -42,7 +45,8 @@ const ClientsPage = () => {
                             <th>Excluir</th>
                         </tr>
                         {listClients.map((e, index) => (
-                            <TableItens key={index} id={index} name={e.name} contact={e.contact} cpf={e.cpf} />
+                            <TableItens key={index} id={index} name={e.name} contact={e.contact}
+                                cpf={e.cpf} state={listClients} setState={setListClients} />
                         ))}
                     </table>
 

@@ -1,9 +1,9 @@
+import { Person } from '../types/Person';
 
-import { Clients } from '../data/ClientsData';
-
-export const delCliets = (id: number) => {
-    console.log(id)
-    Clients.splice(id, 1)
-    console.log(Clients)
-    return Clients
+export const delCliets = (id: number, list: Person[], actionState: (a: Person[]) => void) => {
+    let confirmed = confirm(`Você conforma a exlusão do Cliente: ${list[id].name}`)
+    if (confirmed) {
+        let newList = list.filter((intem, index) => index !== id)
+        actionState(newList)
+    }
 }

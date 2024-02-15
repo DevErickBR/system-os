@@ -6,6 +6,7 @@ type Props = {
 
 
 export const Wrapper = styled.div`
+    overflow: hidden;
     position:absolute;
     z-index: 4;
 `
