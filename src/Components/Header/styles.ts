@@ -24,7 +24,6 @@ export const Container = styled.div`
     font-weight:bold;
     font-size: 30px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
     & img {
         height: 90px;
         margin-left: 50px;
@@ -78,6 +77,7 @@ export const SideMenu = styled.div<Props>`
         from {
             opacity: 0;
             right: 25vw;
+            
         }
         to {
             opacity: 1;

@@ -4,7 +4,6 @@ import { Button } from "../Button/Button";
 import * as FaIcons from "react-icons/fa6";
 import Logo from "../../../public/logo-notefix.svg"
 import { Link } from "react-router-dom";
-import { MagicMotion } from "react-magic-motion";
 
 
 
