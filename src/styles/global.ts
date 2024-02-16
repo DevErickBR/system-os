@@ -14,5 +14,6 @@ export default createGlobalStyle`
     width: 100vw;
     height:100vh;
     overflow:hidden;
+    background-color: ${(props) => props.theme.colors.background}
    }
 `;

@@ -1,4 +1,3 @@
-import { ChangeEvent } from "react";
 import { InputBox } from "./styles";
 
 type Props = {

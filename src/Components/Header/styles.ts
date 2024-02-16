@@ -16,6 +16,7 @@ export const Container = styled.div`
     position:fixed;
     align-items:center;
     justify-items:center;
+    justify-content: space-between;
     padding: 0 20px;
     height: 100px;
     width: 100vw;
@@ -32,6 +33,12 @@ export const Container = styled.div`
         }
        } 
 `
+
+export const Box = styled.div`
+    height:100%;     
+    display:flex;
+    align-items:center
+`;
 
 export const Icon = styled.div`
     width: 50px;
@@ -87,3 +94,58 @@ export const SideMenu = styled.div<Props>`
     
 `
 
+export const Switch = styled.div`
+    height: 50px;
+    width: 100px;
+    position:relative;  
+    display:flex;
+    flex-direction: column;
+    
+
+    input{
+        visibility: hidden;
+        &:checked + label:before{
+            transform: translate(125%, -50%);
+            background: rgb(60,9,108);
+            background: linear-gradient(45deg, rgba(60,9,108,1) 0%, rgba(123,44,191,1) 100%);
+        }
+        &:checked + label svg{
+            transform: translate(167%, -50%);
+        }
+    }
+
+    label{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px 25px;
+    background-color: ${(props) => props.theme.colors.secondary};
+    position:absolute;
+    
+    svg{
+        position:absolute;
+        top:50%;
+        left:9px;
+        transform:translateY(-50%);
+        color: white;
+    }
+
+    &:before{
+        content: "";
+        height: 40px;
+        width: 40px;
+        border-radius: 50% 50%;
+        top: 50%;
+        left: 5px;
+        position:absolute;
+        background: rgb(255,183,0);
+        background: linear-gradient(45deg, rgba(255,183,0,1) 0%, rgba(241,255,0,1) 100%);
+        transform: translateY(-50%);
+
+    }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    
+
+`
