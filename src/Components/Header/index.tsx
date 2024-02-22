@@ -33,8 +33,8 @@ const Header = ({ setState }: Props) => {
                 </Box>
                 <Switch>
 
-                    <input type="checkbox" id="switchTheme" checked={theme} onClick={() => togleTheme()} />
-                    <label for="switchTheme">
+                    <input type="checkbox" id="switchTheme" checked={theme} onChange={togleTheme} />
+                    <label htmlFor="switchTheme">
                         {theme ? <FaIcons.FaMoon /> : <FaIcons.FaSun />}
                     </label>
                 </Switch>
@@ -42,7 +42,7 @@ const Header = ({ setState }: Props) => {
             <SideMenu Menu={showMenu}>
                 <li>
                     <Link onClick={() => { menuIsOpen(!showMenu) }} to="/clientes">< Button title="Clientes" IconButton={FaIcons.FaAddressBook} /></Link>
-                    < Button title="Ordem de Serviços" IconButton={FaIcons.FaClipboard} />
+                    <Link onClick={() => { menuIsOpen(!showMenu) }} to="/ordensServico">< Button title="Ordem de Serviços" IconButton={FaIcons.FaClipboard} /></Link>
                     < Button title="Financeiro" IconButton={FaIcons.FaMoneyBill1Wave} />
                     < Button title="Estoque" IconButton={FaIcons.FaTag} />
                     < Button title="Venda" IconButton={FaIcons.FaCartShopping} />

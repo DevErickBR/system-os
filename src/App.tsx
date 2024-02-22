@@ -7,6 +7,7 @@ import light from "./styles/theme/light";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./styles/global";
 import { useState } from "react";
+import { OrderService } from "./pages/Orders/Orders";
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         <div>
           <Routes >
             <Route path="/clientes" element={<ClientsPage />} />
+            <Route path="/ordensServico" element={<OrderService />} />
           </Routes>
         </div>
       </AppDiv>

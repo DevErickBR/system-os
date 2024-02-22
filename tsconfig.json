@@ -32,5 +32,6 @@
   ],
   "files": [
     "src/styles/light.d.ts",
+    "src/styles/dark.d.ts"
   ]
 }
