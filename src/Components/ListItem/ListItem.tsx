@@ -1,25 +1,21 @@
-import { Order } from "../../types/Order"
 import { ListContainer } from "./styled"
 
 type Props = {
-    state: Order[]
+    id:number
+    client: string;
+    dataStart:string;
+    dataEnd: string;
+    status:string;
 }
 
-export const ListItem = ({ state }: Props) => {
+export const ListItem = ({id, client, dataStart,dataEnd,status}: Props) => {
     return (
         <ListContainer>
-            {state.map((e, index) => (
-                <>
-                    <li key={index}>{e.id = index}</li>
-                    <li>{e.Client}</li>
-                    <li>{e.dateStart}</li>
-                    <li>{e.dateEnd}</li>
-                    <li>{e.status}</li>
-                </>
-            ))}
+                    <tr>{id}</tr>
+                    <tr>{client}</tr>
+                    <tr>{dataStart}</tr>
+                    <tr>{dataEnd}</tr>
+                    <tr>{status}</tr>
         </ListContainer>
     )
-
-
-
 }

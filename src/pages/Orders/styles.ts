@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    display:flex;
-    flex-direction:column;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     margin-top: 100px;
     display:flex;
     padding-top:20px;
@@ -13,7 +11,7 @@ export const Wrapper = styled.div`
     position:absolute;
 `;
 
-export const ListHeader = styled.ul`
+export const ListHeader = styled.thead`
     list-style:none;
     display:flex;
     width: 95%;
@@ -25,7 +23,7 @@ export const ListHeader = styled.ul`
     font-size:20px;
     font-weight:bold;
     border-radius: 25px 25px;
-    li {
+    th {
         border-right:5px solid ${(props) => props.theme.colors.secondary};
         background-color:red;
         height:50px;
@@ -39,4 +37,13 @@ export const ListHeader = styled.ul`
         font-weight:bold;
         border-radius: 25px 25px 0px 0px;
     }
+`;
+
+export const ContainerTable = styled.div`
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 `;
