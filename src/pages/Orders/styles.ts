@@ -47,3 +47,9 @@ export const ContainerTable = styled.div`
     justify-content: start;
     align-items: center;
 `;
+
+export const ConstainerOs = styled.div`
+    width:100vw;
+    height:100vh;
+    background-color:red;
+`;
