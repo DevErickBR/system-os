@@ -49,7 +49,10 @@ export const ContainerTable = styled.div`
 `;
 
 export const ConstainerOs = styled.div`
+    margin-top:200px;
     width:100vw;
     height:100vh;
     background-color:red;
+    display:flex;
+
 `;

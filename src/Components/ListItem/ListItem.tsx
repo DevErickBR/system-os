@@ -8,12 +8,14 @@ type Props = {
     status: string;
     actionState: (a: boolean) => void;
     state: boolean;
+    setTargetId: (a: number) => void;
 }
 
-export const ListItem = ({ id, client, dataStart, dataEnd, status, actionState, state }: Props) => {
+export const ListItem = ({ id, client, dataStart, dataEnd, status, actionState, state, setTargetId }: Props) => {
 
     const eventClickOrder = (e: React.MouseEvent) => {
-        console.log(e.currentTarget.id)
+        setTargetId(parseInt(e.currentTarget.id))
+        actionState(!state)
     }
 
     return (
