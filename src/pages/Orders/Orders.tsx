@@ -4,6 +4,7 @@ import { Orders } from "../../data/OrdersData";
 import { ListHeader, Wrapper, ContainerTable, ConstainerOs } from "./styles"
 import { Order } from "../../types/Order";
 import { InputOrder } from "../../Components/InputOrder/InputOrder";
+import { BoxMensage } from "../../Components/BoxMensage/BoxMensage";
 
 
 export const OrderService = () => {
@@ -37,6 +38,7 @@ export const OrderService = () => {
                 <ConstainerOs>
                     { targetOrder != null &&
                     <>
+                    <div id="headerOs">
                         <InputOrder id="divClient" nameInput="Client" titleInput="Cliente" 
                         valueInput={listOrders[targetOrder].Client.toUpperCase()}
                         />
@@ -48,8 +50,10 @@ export const OrderService = () => {
                         />
                         <InputOrder id="divPrice" nameInput="price" titleInput="Valor" 
                         valueInput={`R$ ${listOrders[targetOrder].price}`}
-                        />
-                    </>    
+                        />    
+                    </div>
+                    <BoxMensage/>  
+                    </>  
                     }   
                 </ConstainerOs>
             }

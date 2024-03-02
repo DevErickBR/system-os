@@ -12,9 +12,11 @@ export const InputOrder = ({id,titleInput,nameInput,valueInput}:Props) => {
 
     return(
         <ContainerInput id={id}>
-            <label htmlFor={nameInput}>{titleInput}</label>
-            <div >
-                <input name={nameInput} type="text" value={valueInput} autoFocus readOnly/>
+            <div>
+                <label htmlFor={nameInput}>{titleInput}</label>
+                <div >
+                    <input name={nameInput} type="text" value={valueInput} autoFocus readOnly/>
+                </div>
             </div>
         </ContainerInput>
 

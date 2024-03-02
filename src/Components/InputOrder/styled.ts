@@ -4,13 +4,17 @@ export const ContainerInput = styled.div`
     display:flex;
     justify-content:center;
     align-items: start;
-    align-content:end;
-    width:100%;
-    height: 100%;
-    input{
-        padding:7px;
+    height:50px;
+
+    div{
         display:flex;
         align-items:center;
-        justify-content:center;
+        gap: 10px;
+    };
+    
+    input{
+        padding:7px;
+        text-align:center;
+        font-size: 18px;
     }
 `;

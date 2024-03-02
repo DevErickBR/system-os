@@ -49,10 +49,15 @@ export const ContainerTable = styled.div`
 `;
 
 export const ConstainerOs = styled.div`
-    margin-top:200px;
     width:100vw;
     height:100vh;
-    background-color:red;
+    background-color:blue;
     display:flex;
-
+    flex-direction: column;
+    align-items: center;
+    div{
+        background-color:red;
+        display:flex;
+        flex-direction:row;
+    }
 `;
