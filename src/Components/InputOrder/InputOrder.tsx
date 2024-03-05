@@ -14,7 +14,7 @@ export const InputOrder = ({id,titleInput,nameInput,valueInput}:Props) => {
         <ContainerInput id={id}>
             <div>
                 <label htmlFor={nameInput}>{titleInput}</label>
-                <div >
+                <div className="inputDiv">
                     <input name={nameInput} type="text" value={valueInput} autoFocus readOnly/>
                 </div>
             </div>

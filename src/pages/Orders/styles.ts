@@ -49,15 +49,20 @@ export const ContainerTable = styled.div`
 `;
 
 export const ConstainerOs = styled.div`
-    width:100vw;
-    height:100vh;
-    background-color:blue;
+    width:100%;
+    height:100%;
     display:flex;
     flex-direction: column;
-    align-items: center;
-    div{
-        background-color:red;
+    flex-wrap: wrap;
+    align-items:center;
+
+    .headerOs{
+        position:relative;
+        width:100%;
         display:flex;
         flex-direction:row;
+        justify-content:center;
+        gap: 20px;
+        padding:20px;   
     }
 `;

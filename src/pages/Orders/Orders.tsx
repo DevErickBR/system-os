@@ -38,7 +38,7 @@ export const OrderService = () => {
                 <ConstainerOs>
                     { targetOrder != null &&
                     <>
-                    <div id="headerOs">
+                    <div className="headerOs">
                         <InputOrder id="divClient" nameInput="Client" titleInput="Cliente" 
                         valueInput={listOrders[targetOrder].Client.toUpperCase()}
                         />
@@ -52,7 +52,7 @@ export const OrderService = () => {
                         valueInput={`R$ ${listOrders[targetOrder].price}`}
                         />    
                     </div>
-                    <BoxMensage/>  
+                    <BoxMensage description={listOrders[targetOrder].msg}/>  
                     </>  
                     }   
                 </ConstainerOs>

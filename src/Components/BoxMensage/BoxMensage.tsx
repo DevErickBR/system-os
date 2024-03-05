@@ -1,7 +1,13 @@
-export const BoxMensage = () => {
+import { ContainerMensage } from "./styled";
+
+type Props = {
+    description: string;
+}
+
+export const BoxMensage = ( {description}:Props ) => {
     return (
-        <div>
-        ola mundo como vai
-        </div>
+        <ContainerMensage>
+            {description.toUpperCase()}
+        </ContainerMensage>
     );
 };

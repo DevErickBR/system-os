@@ -5,4 +5,5 @@ export type Order = {
     dateEnd: string;
     status: string;
     price: number;
+    msg: string;
 }
