@@ -65,4 +65,10 @@ export const ConstainerOs = styled.div`
         gap: 20px;
         padding:20px;   
     }
+
+    .boxButton {
+        width: 100%;
+        display:flex;
+        justify-content:space-around;
+    }
 `;

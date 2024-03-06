@@ -3,11 +3,12 @@ import { Box } from "./stylesButton";
 type Props = {
     title: string;
     IconButton?: any;
+    action?: () => void;
 }
 
-export const Button = ({ title, IconButton }: Props) => {
+export const Button = ({ title, IconButton, action }: Props) => {
     return (
-        <Box><IconButton />{title}</Box>
+        <Box onClick={action}><IconButton />{title}</Box>
     );
 }
 
