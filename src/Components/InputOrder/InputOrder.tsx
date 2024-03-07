@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { ContainerInput } from "./styled"
 
 type Props = {
@@ -9,13 +10,18 @@ type Props = {
 
 export const InputOrder = ({id,titleInput,nameInput,valueInput}:Props) => {
 
+    const [value, setValue] = useState<string>(valueInput)
+
+    const handleChangeValue = (e: React.FormEvent<HTMLInputElement>) => {
+        setValue(e.currentTarget.value);
+    }
 
     return(
         <ContainerInput id={id}>
             <div>
                 <label htmlFor={nameInput}>{titleInput}</label>
                 <div className="inputDiv">
-                    <input name={nameInput} type="text" value={valueInput} autoFocus readOnly/>
+                    <input id={nameInput} name={nameInput} type="text" value={value} onChange={handleChangeValue} readOnly/>
                 </div>
             </div>
         </ContainerInput>

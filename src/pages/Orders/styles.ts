@@ -46,6 +46,7 @@ export const ContainerTable = styled.div`
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    z-index: 0;
 `;
 
 export const ConstainerOs = styled.div`

@@ -26,7 +26,24 @@ export const OrderService = () => {
             setShowOs(!showOs)
             setTargetOrder(undefined)
         }
-        
+    }
+    
+
+    const editOrder = () => {
+        let inputs = document.getElementsByClassName("headerOs")[0].getElementsByTagName("input")
+        for (let i = 0; i < inputs.length; i++){
+            inputs[i].removeAttribute("readonly")
+        }
+    }
+
+    const saveOrder = () => {
+        let inputs = document.getElementsByClassName("headerOs")[0].getElementsByTagName("input")
+        for (let i = 0; i < inputs.length; i++){
+            inputs[i].readOnly = true
+        }
+        if (targetOrder != undefined){
+            listOrders[targetOrder].Client = inputs[0].value
+        }
     }
 
     return (
@@ -69,8 +86,8 @@ export const OrderService = () => {
                     </div>
                     <BoxMensage description={listOrders[targetOrder].msg}/>
                     <div className="boxButton">
-                    <Button title="Editar" IconButton={FaIcons.FaPen}/>  
-                    <Button title="Salvar" IconButton={FaIcons.FaCheck}/>  
+                    <Button title="Editar" IconButton={FaIcons.FaPen} action={editOrder}/>  
+                    <Button title="Salvar" IconButton={FaIcons.FaCheck} action={saveOrder}/>  
                     <Button title="Excluir" IconButton={FaIcons.FaTrash} action={deleteOrder}/>  
                     <Button title="Sair" IconButton={FaIcons.FaAngleLeft} action={()=>setShowOs(!showOs)}/>
                     </div>
